@@ -17,7 +17,6 @@ public class PrincipalDetails implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        System.out.println("PrincipalDetails.getAuthorities");
         return Collections.singletonList(new SimpleGrantedAuthority(user.getRole().getCode()));
     }
 

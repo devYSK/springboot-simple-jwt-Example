@@ -21,12 +21,10 @@ public class JwtAuthenticationFilter extends BasicAuthenticationFilter {
     public JwtAuthenticationFilter(AuthenticationManager authenticationManager, JwtTokenProvider jwtTokenProvider) {
         super(authenticationManager);
         this.jwtTokenProvider = jwtTokenProvider;
-        System.out.println("JwtAuthenticationFilter.JwtAuthenticationFilter");
     }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
-        System.out.println("JwtAuthenticationFilter.doFilterInternal");
         String token = jwtTokenProvider.getTokenFromRequest((HttpServletRequest) request);
 
         // 토큰 유효 확인

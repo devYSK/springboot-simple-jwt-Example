@@ -36,8 +36,6 @@ public class UserController {
     @PostMapping("/login")
     public String login(@RequestBody Map<String, String> user) {
 
-        System.out.println("UserController.login");
-
         User member = userRepository.findByEmail(user.get("email"))
                 .orElseThrow(() -> new IllegalArgumentException("가입 되지 않은 EMAIL 입니다"));
 

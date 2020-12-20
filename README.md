@@ -134,21 +134,21 @@ public class UserController {
 
 ### 회원가입 요청 
 
-> method: post
-> url :  /join
-> param : email, password 
-> return : UserId
+> method: post  
+> url :  /join  
+> param : email, password   
+> return : UserId  
 
-![](2020-12-20-21-46-11.png)
+![](img/2020-12-20-21-46-11.png)
 ### 로그인 요청
 
 로그인 
-> method : post
-> url : /login
-> param : email, password
-> return : Jwt 토큰
+> method : post  
+> url : /login  
+> param : email, password  
+> return : Jwt 토큰  
 
-![](2020-12-20-21-46-27.png)
+![](img/2020-12-20-21-46-27.png)
 
 로그인 요청을 보내서 로그인에 성공하게 되면 
 토큰을 만들어 리턴해준다 
@@ -156,7 +156,7 @@ public class UserController {
 
 ### 자원 요청 프로세스
 
-![](2020-12-20-22-03-41.png)
+![](img/2020-12-20-22-03-41.png)
 
 헤더의 x-auth-token 키에 위에서 받은 Jwt토큰을 넣어 요청하면
 
